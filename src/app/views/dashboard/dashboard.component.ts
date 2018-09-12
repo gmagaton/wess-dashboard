@@ -13,11 +13,11 @@ export class DashboardComponent implements OnInit {
   // lineChart1
   public lineChart1Data: Array<any> = [
     {
-      data: [65, 59, 84, 84, 51, 55, 40],
-      label: 'Series A'
+      data: [334, 338, 321, 332, 318, 380],
+      label: 'Valor'
     }
   ];
-  public lineChart1Labels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  public lineChart1Labels: Array<any> = ['Abr/18', 'Mai/18', 'Jun/18', 'Jul/18', 'Ago/18','Set/18'];
   public lineChart1Options: any = {
     tooltips: {
       enabled: false,
@@ -41,7 +41,7 @@ export class DashboardComponent implements OnInit {
         ticks: {
           display: false,
           min: 40 - 5,
-          max: 84 + 5,
+          max: 550 + 5,
         }
       }],
     },
@@ -71,11 +71,11 @@ export class DashboardComponent implements OnInit {
   // lineChart2
   public lineChart2Data: Array<any> = [
     {
-      data: [1, 18, 9, 17, 34, 22, 11],
-      label: 'Series A'
+      data: [180, 190, 168, 150, 210, 190],
+      label: 'Quantidade'
     }
   ];
-  public lineChart2Labels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  public lineChart2Labels: Array<any> = ['Abr/18', 'Mai/18', 'Jun/18', 'Jul/18', 'Ago/18','Set/18'];
   public lineChart2Options: any = {
     tooltips: {
       enabled: false,
@@ -99,7 +99,7 @@ export class DashboardComponent implements OnInit {
         ticks: {
           display: false,
           min: 1 - 5,
-          max: 34 + 5,
+          max: 250 + 5,
         }
       }],
     },
@@ -373,6 +373,34 @@ export class DashboardComponent implements OnInit {
   ];
   public brandBoxChartLegend = false;
   public brandBoxChartType = 'line';
+
+  // barChart
+  public barChartOptions: any = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
+
+  public barChartLabels: string[] = ['03/09/18', '04/09/18', '05/09/18', '06/09/18', '07/09/18', '08/09/18', '09/09/18'];
+  public barChartType = 'bar';
+  public barChartLegend = true;
+
+  public barChartData: any[] = [
+    {data: [229776.44, 228351.31, 279657.61, 211552.92, 261552.92, 231452.92, 251552.92], label: 'Mês 08'},
+    {data: [219776.44, 218351.31, 249657.61, 241552.92, 251552.92, 231552.92, 262552.92], label: 'Mês 09'}
+  ];
+
+  // barChart2
+  public barChartOptions2: any = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
+  public barChartLabels2: string[] = ['03/09/18', '04/09/18', '05/09/18', '06/09/18', '07/09/18', '08/09/18', '09/09/18'];
+  public barChartType2 = 'bar';
+  public barChartLegend2 = true;
+
+  public barChartData2: any[] = [
+    {data: [185, 189, 220, 189, 190, 210, 220], label: 'Quantidade'}
+  ];
 
   public random(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1) + min);
